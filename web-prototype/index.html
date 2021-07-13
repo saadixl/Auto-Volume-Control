@@ -1,0 +1,45 @@
+<html>
+    <title>Auto Volume Control</title>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <video id="mainVideo" width="640" height="480" controls playsInline>
+                    <source src="clip.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Action</th>
+                            <th scope="col">Decibel</th>
+                            <th scope="col">Volume</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                                <button class="btn btn-block btn-primary">Click here to play</button>
+                            </td>
+                            <td><span id="currentDB" class="badge bg-secondary">0</span></td>
+                            <td><span id="currentVL" class="badge bg-secondary">0%</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <h5>Auto Volume Control Prototype</h5>
+                <p class="small">Sometimes I get tired of adjusting volume while watching a war movie. The fighting scene can suddenly become very loud. Then the normal conversation can again become very quiet. Can we find a automated solution? That's why I am trying to make the volume control automated. The plan is simple, listen to the mic and adjust the volume depending on the noise being produced.</p>
+                <p class="small text-danger"><i class="fas fa-exclamation-triangle"></i> Right now this prototype only works in Safari browser.<br/><i class="fas fa-exclamation-triangle"></i> Also please allow the browser to use your mic.</p>
+            </div>
+            <div class="col"></div>
+          </div>
+        <script src="https://unpkg.com/tone"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
